@@ -63,7 +63,7 @@ Only respond with json as string! Do not respont with Chat. This is a technical 
     generated_game = response.choices[0].message.content
     logger.debug(generated_game)
     json_content = "{" + generated_game.split("{", 1)[1].rsplit("}", 1)[0] + "}"
-    print(json_content)
+    logger.info("JSON CONTENT:" + json_content)
 
     return json.loads(json_content)
 
@@ -112,7 +112,7 @@ def start_game(llm_config, generated_world):
     )
 
     player_1 = autogen.ConversableAgent(
-        name=generated_world.get("player_1", {}).get("name").replace(" ", "_"),
+        name=generated_world.get("player_1", {}).get("name").replace(" ", "_").replace('\'', ''),
         system_message=(
             "You are involved in a murder case." + murderer_instructions
             if generated_world.get("player_1", {}).get("is_murderer") == "True"
@@ -126,7 +126,7 @@ def start_game(llm_config, generated_world):
     )
 
     player_2 = autogen.ConversableAgent(
-        name=generated_world.get("player_2", {}).get("name").replace(" ", "_"),
+        name=generated_world.get("player_2", {}).get("name").replace(" ", "_").replace('\'', ''),
         system_message=(
             "You are involved in a murder case. " + murderer_instructions
             if generated_world.get("player_2", {}).get("is_murderer") == "True"
@@ -140,7 +140,7 @@ def start_game(llm_config, generated_world):
     )
 
     player_3 = autogen.ConversableAgent(
-        name=generated_world.get("player_3", {}).get("name").replace(" ", "_"),
+        name=generated_world.get("player_3", {}).get("name").replace(" ", "_").replace('\'', ''),
         system_message=(
             "You are involved in a murder case. " + murderer_instructions
             if generated_world.get("player_3", {}).get("is_murderer") == "True"
@@ -179,8 +179,9 @@ def start_game(llm_config, generated_world):
 
 # main function for the application
 if __name__ == "__main__":
-    print("TOPIC:")
-    topic = input("Please enter the general topic of the detective game:")
+    print("Please enter the general topic of the detective game. ")
+    topic = input("TOPIC: ")
+    print("You entered the topic: " + topic)
 
     print("Generating new game")
     generated_world = generate_game(topic)
