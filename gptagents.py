@@ -61,7 +61,7 @@ Only respond with json as string! Do not respont with Chat. This is a technical 
     )
 
     generated_game = response.choices[0].message.content
-    logger.debug(generated_game)
+    print("Generated World: "+generated_game)
     json_content = "{" + generated_game.split("{", 1)[1].rsplit("}", 1)[0] + "}"
     logger.info("JSON CONTENT:" + json_content)
 
