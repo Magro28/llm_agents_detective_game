@@ -1,6 +1,6 @@
-﻿Please enter the general topic of the detective game. /
-TOPIC: You entered the topic: very old cold war agents meet again /
-Generating new game /
+﻿Please enter the general topic of the detective game. //
+TOPIC: You entered the topic: very old cold war agents meet again //
+Generating new game //
 Generated World: ```json
 {
   "true_murder_story": "In the shadowed bunkers of an aging Cold War safe house, an old rivalry reignites in fatal consequence. Victor Petrov, a disillusioned former Soviet agent, harbors deep-seated vengeance against the charismatic double agent, Sergei Ivanov. As Sergei reveals clandestinely collected artifacts of their past in a private reunion, Victor seizes a moment of vulnerability. He quietly laces Sergei's drink with a slow-acting poison he procured during his espionage days. Sipping obliviously, Sergei succumbs to the toxin, seemingly collapsing from a sudden illness. Victor's motive is clear - vengeance for Sergei's betrayal that cost him his life mission.",
