@@ -9,12 +9,12 @@ The game runs in round robin style where Sherlock asks all his questions in a gr
 After a while Sherlock will end the investigation and announces the murderer
 
 ## Issues
-* Sherlock seems to confuse names afer a while
+* Sherlock seems to confuse names sometimes because of a lack of memory
 * Sherlock seems sometimes to blame a complete outstander as the murderer
 * The game master creates a broken case
 
 ## Examples
-Look at the md files for different examples
+Look at the md files for different examples (results_agents.md etc.)
 
 ### Cold War Agents
 
