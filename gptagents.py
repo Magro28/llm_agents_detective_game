@@ -1,4 +1,4 @@
-# pip install pyautogen
+# pip install ag2
 
 import os, json, logging
 import autogen
